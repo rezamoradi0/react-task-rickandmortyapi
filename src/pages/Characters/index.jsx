@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react"
+
 import useCharactersPage from "../../utils/hooks/useCharactersPage"
 import CharacterComp from "../../components/modules/CharacterComp";
 
 function Characters() {
     const {isLoading,data}=useCharactersPage();
+    console.log(isLoading);
     if(isLoading){
       return <div>Loading</div>;
     }

@@ -14,6 +14,7 @@ function useCharactersPage() {
     const responseJson = await response.json();
     console.log(responseJson);
     setData(responseJson);
+    setIsLoading(false);
   }
   useEffect(() => {
     getPage();
