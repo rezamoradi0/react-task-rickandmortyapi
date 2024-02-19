@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { API_ADDRESS_CHARACTERS } from "../../constant/address";
 function CharacterComp({ data }) {
   return (
-    <div className=" col-span-1 row-span-1  rounded-lg overflow-hidden border border-gray-600 flex">
+    <div className=" col-span-1 row-span-1  rounded-lg overflow-hidden border border-gray-600 flex p-1">
       <img
         src={data.image}
-        className="w-1/3  h-full object-cover object-center "
+        className="w-1/2  h-full object-cover object-center  rounded-lg"
         alt={data.name}
       />
       <div className="flex flex-col items-center justify-between p-4  h-full grow gap-y-2">

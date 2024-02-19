@@ -1,13 +1,19 @@
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+import useCharacterSingle from "../../utils/hooks/useCharacterSingle";
+import CharacterSingle from "../../components/templates/CharacterSingle";
 
 function Character() {
-    const params=useParams();
+  const params = useParams();
+  const characterId = params.characterId;
+  const { isLoading, characterData } = useCharacterSingle(characterId);
 
-    return (
-        <div>
-            {params&&params.characterId}
-        </div>
-    )
+  if (isLoading) {
+    return <div>loading</div>;
+  }
+  if (characterData.name) {
+    return <CharacterSingle data={characterData} />
+  }
+  <div>Error</div>;
 }
 
-export default Character
+export default Character;
