@@ -6,10 +6,10 @@ import Character from "../pages/Characters/Character";
 function AppRoutes() {
   const MainWrapper = () => {
     return (
-      <div>
-        <header>Header</header>
+      <div className="flex flex-col   min-h-svh">
+        <header className="w-full h-12">Header</header>
         <Outlet />
-        <footer>Footer</footer>
+        <footer className="w-full h-12 mt-auto">Footer</footer>
       </div>
     );
   };
